@@ -41,7 +41,7 @@
           <a href="#proyectos">Proyectos</a>
           <a href="#contacto">Contacto</a>
         </div>
-        <a href="#contacto" class="nav-cta">Pide presupuesto</a>
+        <a href="tel:+34624090137" class="nav-cta">Contactar</a>
       </nav>
     </header>
     <section class="hero">
@@ -63,9 +63,11 @@
             última llave.
           </p>
           <div class="hero-ctas">
-            <a href="#contacto" class="btn-solid">Solicita tu presupuesto</a>
-            <a href="#transformacion" class="btn-outline"
-              >Ver una transformación</a
+            <a href="#contacto" class="btn-solid">Solicitar presupuesto</a>
+            <a
+              href="https://wa.me/34624090137?text=Hola%20¿me%20brindas%20más%20información?"
+              class="btn-outline"
+              >Enviar mensaje</a
             >
           </div>
         </div>
@@ -460,7 +462,11 @@
           </div>
         </div>
         <div class="contact-form-side">
-          <div class="contact-form-inner">
+          <form
+            action="https://formsubmit.co/energycompanya558@gmail.com"
+            method="POST"
+            class="contact-form-inner"
+          >
             <h2>Cuéntanos tu proyecto</h2>
             <p>
               Te respondemos en menos de 24h laborables con un primer
@@ -470,25 +476,24 @@
             <div class="form-row">
               <div class="field full">
                 <label>Nombre</label
-                ><input type="text" placeholder="Tu nombre" />
+                ><input type="text" placeholder="Tu nombre" name="nombre" />
               </div>
             </div>
             <div class="form-row">
               <div class="field full">
-                <label>Teléfono</label><input type="tel" placeholder="+34" />
+                <label>Teléfono</label><input type="tel" placeholder="+34" name="telefono" />
               </div>
             </div>
-
             <div class="form-row">
               <div class="field full">
                 <label>Email</label
-                ><input type="email" placeholder="tu@email.com" />
+                ><input type="email" placeholder="tu@email.com" name="email" />
               </div>
             </div>
             <div class="form-row">
               <div class="field full">
                 <label>Servicio de interés</label>
-                <select>
+                <select name="servicio">
                   <option>Construcción</option>
                   <option>Inversión inmobiliaria</option>
                   <option>Reformas</option>
@@ -502,22 +507,21 @@
               <div class="field full">
                 <label>Cuéntanos tu proyecto</label
                 ><textarea
-                  placeholder="Describe brevemente qué necesitas..."
+                  placeholder="Describe brevemente qué necesitas..." name="proyecto"
                 ></textarea>
               </div>
             </div>
-            <button
-              class="submit-btn"
-              type="button"
-              onclick="
-                alert(
-                  'Maqueta de diseño — en el sitio final este formulario enviará la solicitud a LEMONAKO.',
-                )
-              "
-            >
-              Enviar solicitud
-            </button>
-          </div>
+            <input type="hidden" name="_captcha" value="false" />
+
+            <!-- Redirección tras enviar -->
+
+            <input
+              type="hidden"
+              name="_next"
+              value="https://walkeriano.github.io/lemonako/"
+            />
+            <button class="submit-btn" type="submit">Enviar solicitud</button>
+          </form>
         </div>
       </div>
     </section>
